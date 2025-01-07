@@ -1,0 +1,76 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Contact" title="Let's Connect!" />
+
+  <ContactUs
+  id="form"
+  title="Drop me a message today!"
+  subtitle="For quicker answers, feel free to give me call. You may find the solution you're looking  for right there!"
+  inputs={[
+    {
+      type: 'text',
+      name: 'name',
+      label: 'Name',
+    },
+    {
+      type: 'email',
+      name: 'email',
+      label: 'Email',
+    },
+  ]}
+  textarea={{
+    label: 'Message',
+  }}
+  
+  description="I typically responds within 24 business hours."
+/>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="I am here to help!"
+    items={[
+      {
+        title: 'General support',
+        description: `Chat with me for inquiries related to website navigation, software issues or anything realted to support.`,
+      },
+      {
+        title: 'Contact sales',
+        description:
+          'Chat with me for questions about purchases, inquiries about specific projects, etc.',
+      },
+      {
+        title: 'Projects on your mind?',
+        description:
+          'Chat with me when you want to have an idea on how to land your new project, I will be delightfull to help you.',
+      },
+      {
+        title: 'Phone',
+        description: '+52 55-39-53-28-87',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'davidagonzalez350@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Location',
+        description: 'Mexico City, Mexico',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>

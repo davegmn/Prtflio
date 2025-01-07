@@ -1,0 +1,381 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+
+import FAQs from '~/components/widgets/FAQs.astro';
+
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import myImage from '~/assets/images/tradeevolution.png';
+import myImage2 from '~/assets/images/success.png';
+import myImage3 from '~/assets/images/digiapp.png';
+import myImage4 from '~/assets/images/SpeechAi.png';
+
+
+
+const metadata = {
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'My full CV',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+      { text: 'Get to know me', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      Hi I'm Dave <span class="hidden xl:inline"> and a big welcome to my world, </span>
+      <span class="text-accent dark:text-white highlight">the start for your next</span> project and dream
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">My space</span> is created step by step, trying to make the most of what I learn every day.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
+      Data Science, Web design, Software design, AI and sports knowledge.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="My skills set"
+    subtitle="Through my uni & personal journey, I've acquired a set of habilities that have let me develop a set of projects."
+    items={[
+      {
+        title: 'Python',
+        description:
+          'The most versatile programming lamguage that I have learned. I made projects about data science, software and AI.',
+        icon: 'tabler:brand-python',
+      },
+      {
+        title: 'Kotlin',
+        description:
+          'A language that I have learned to develop Android apps. I have made some projects that I want to get into the Playstore.',
+        icon: 'tabler:brand-android',
+      },
+      {
+        title: 'HTML, CSS, JS',
+        description:
+          'Web Development is a must for me. I have made some personal projects and also for companies that I want to show you.',
+        icon: 'tabler:brand-javascript',
+      },
+      {
+        title: 'Data visualization',
+        description:
+          'Tools as Tableau or Power BI are important for a data scientist, I started with Python, but the way of representation need more tunning.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Kali Linux',
+        description:
+          "One of the skills I enjoyed the most through my PG studies and applied in research of how to improve security in networks and devices.",
+        icon: 'tabler:brand-ubuntu',
+      },
+      {
+        title: 'Open to new ideas and contributions',
+        description:
+          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Inside template"
+    title="A fun road through my projects!"
+    items={[
+      {
+        title: 'Built on HTML, CSS, and JavaScript',
+        description:
+          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+      },
+      {
+        title: 'A focus on the comapany values',
+        description:
+          'They made it clear, the values of the company are the most important thing to show in the website.',
+      },
+      {
+        title: 'Cross-browser compatibility',
+        description:
+          'Ensuring their website looked and worked consistently across various web browsers, delivering a seamless experience to all users.',
+      },
+    ]}
+    image={{
+      src: myImage,
+      alt: 'Colorful Image',
+      class: 'w-full h-auto',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Trade Evolution</h3>
+      A good start for a potential company
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Built on HTML, CSS, and JavaScript',
+        description: `Benefiting from the performance and developer-friendly features of this modern static site generator.`,
+      },
+      {
+        title: 'Multiple layout possibilities',
+        description:
+          'Explored various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+      },
+      {
+        title: 'Fully responsive design',
+        description:
+          "Ensuring the website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+      },
+      {
+        title: 'Integration of media',
+        description:
+          'Seamlessly incorporate images, videos, and multimedia elements that enhance the content and engage visitors effectively.',
+      },
+    ]}
+    image={{
+      src: myImage2,
+      alt: 'Blueprint Image',
+    }}
+  >
+  
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Succesfull Trade</h3>
+    The saga conntinues
+  </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Enhanced user engagement',
+        description:
+          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+      },
+      {
+        title: 'Continuous improvement',
+        description:
+          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
+      },
+      {
+        title: 'Time and resource efficiency',
+        description:
+          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
+      },
+      {
+        title: 'Community support',
+        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
+      },
+    ]}
+    image={{
+      src: myImage3,
+      alt: 'Astronauts Image',
+    }}
+  >
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Digital Signature App</h3>
+    Security has been always a priority
+  </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Speech Assistant AI."
+    items={[
+      {
+        title: 'AI: <span class="font-medium">Included</span>',
+        description:
+          "Just like a personal assistant, AI helps you navigate the digital world. It's like having a sidekick that anticipates your needs and makes your life easier.",
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Objective: <span class="font-medium">For the most in need</span>',
+        description:
+          "This project was made to help kids with autism. some sort of a chatbot who tries to help them and also understand the words they are saying, creating an atmoshphere of empathy and understanding.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Next steps: <span class="font-medium">Make it greater</span>',
+        description:
+          'Of course as dissertation project, taking this to next level, not also would be great for the project, also the next levels means help these kids.',
+        icon: 'tabler:list',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: myImage4, 
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Services I offer"
+    subtitle="I offer my best services to help you achieve your goals and make your product stand out from the crowd."
+    tagline="Components"
+    items={[
+      {
+        title: 'Website',
+        description: "Your website for you new product or service could be a reality, an oustanding place to start your journey.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Data bases',
+        description:
+          "The data is the most important thing in a company, I can help you to create a database that fits your needs.",
+        icon: 'flat-color-icons:database',
+      },
+      {
+        title: 'Features',
+        description:
+          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Data reports',
+        description:
+          "In the case you need to know how to get into the market, I can help you to create a report that shows you the most important data and the best insights.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Cybersecurity',
+        description:
+          'Ensure you have the right secruity on your system or network, protect yourself against the most popular security leaks.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Pricing',
+        description: 'Do not worry about the price, I can help you to get the best price for your product or service.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Reviews"
+    subtitle="Dive into the following reviews of my clients to gain insights into the powerful features that I could offer and how it can elevate your project journey."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Ruben Colin CEO at Trade Evolution',
+        description:
+          "David has been awesome with the site of the company, a great vision with it and also a his great skills have made a good project.",
+      },
+      {
+        title: 'Alonso Colin manager at Trade Evolution',
+        description:
+          'When we hired David to the project, we knew from the start that he was going to make somehting great and positive to the company, something incredible as a fresher.',
+      },
+      {
+        title: 'David Cruz manager at Successfull Trade',
+        description:
+          "The way he made our website was just incredible and something we really like the most about him, at this point we just want to make more projects with him.",
+      },
+      {
+        title: "Ruben Colin CEO at Trade Evolution",
+        description:
+          "We are developing a project at the moment and thanks to him, it looks such a major thing that can have a positive impact.",
+      },
+      
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
+    ]}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact me',
+        href: 'src/pages/contact.astro',
+        target: '_blank',
+  
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Contact &nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Me</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Don't hesitate to contact me if you have any questions or need further information about your next idea.
+    </Fragment>
+  </CallToAction>
+</Layout>
+

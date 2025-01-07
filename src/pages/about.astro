@@ -1,0 +1,169 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import imagea from '~/assets/images/aboutme.jpeg';
+import imageab from '~/assets/images/about.jpeg';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About me"
+    image={{
+      src: imagea,
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      I am David a guy which passion has driven to his biggest dreams and objectives. <br />
+      <span class="text-accent dark:text-white highlight"> </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      A Data scientist with passion and driven to look up the most important insights about data and the environment. Not only that, but also a person who loves to share his knowledge with others.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Statistics about me"
+    stats={[
+      { title: 'Collaborators', amount: '2' },
+      { title: 'Companies', amount: '2' },
+      { title: 'Projects', amount: '5' },
+      { title: 'Reviwes', amount: '5' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Where I have been"
+    subtitle="From Uni to my current place of work, here I show you where I have studied and worked."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Tecnologico de Monterrey (ITESM) (2020-2024) BS',
+        description:
+          'Uni was a very important part of my life, I learned a lot of things and met a lot of people. I studied Data Science and Mathematic engineer and I loved it.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'University of Essex (2023-2024) Postgraduate Studies',
+        description:
+          'I studied a postgraduate in Computer networks and security, I learned a lot of things and met a lot of people. I loved it.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Vanier College (2019) Overseas student',
+        description:
+          'In Canada I had the opportunity to study a marketing course, where I learnt the basics of insights.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      
+      {
+        title: 'Trade Evolution (2023-2024) Web developer & Dev Fullstack',
+        description:
+          'The first design of their website was made by me, I also developed the backend and the frontend of an intern sytem they need it for automatization of company processes.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Successfull Trade (2024) Web developer',
+        description:
+          'As a new company rising they needed a website to reach the audience they wanted and with that establish themselves into the market.',
+        icon: 'tabler:template',
+      },
+
+      {
+        title: 'Russell Bedford (American Express) (2024-Today) Analyst Administator',
+        description:
+          'In collaboration with American Express I have been working as an analyst administrator in the SBS and corporate area as product owner, where I have been able to develop my skills in data analysis and data science.',
+        icon: 'tabler:template',
+      },
+      
+     
+    ]}
+    image={{
+      src: imageab,
+      alt: 'Colorful Image',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Achievements"
+    subtitle="Some achieves I've earned so far."
+    isReversed={true}
+    
+    items={[
+      {
+        title: 'Google Cloud Certification (2023)',
+        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Kaggle Competition courses (2024)',
+        description:
+          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Data Science Hackathon (2023)',
+        description:
+          'Too much to learnt in this hackathon, but working with a new technology as Solana, implementing a wirtual wallet was the reward.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="The first step to success"
+    tagline="Contact me"
+    columns={2}
+    items={[
+      {
+        title: 'Chat with me',
+        description:
+          'Leave me a message at my email davidagonzalez350@gmail.com. I will be happy to help you with any questions you may have.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Call me',
+        description:
+          'You can also give me a call at +52 5539532887, I will be happy to talk to you.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>
